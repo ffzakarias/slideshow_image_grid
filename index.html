@@ -1,16 +1,3 @@
-Let's ensure that the slideshow is functioning correctly and the layout is as intended. Here are a few steps to check and a revised code snippet if needed.
-
-### Troubleshooting Steps
-1. **Check Image Paths**: Make sure that the image sources (`src="img1.jpg"`, etc.) are correct and the images are accessible from the directory where your HTML file is stored.
-
-2. **Browser Cache**: Sometimes, browsers cache an old version of the file. Try clearing your browser's cache or open the HTML file in incognito mode to see the latest changes.
-
-3. **Console Errors**: Open the browser's developer tools (usually F12) and check the console for any JavaScript errors or warnings that could prevent the slideshow from working.
-
-### Revised Code
-If everything seems correct and it's still not working, here is the revised code with added debug points in the JavaScript that might help you see if the functions are being called properly:
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -100,6 +87,7 @@ If everything seems correct and it's still not working, here is the revised code
     </div>
   </div>
 
+  <!-- Left and right arrows -->
   <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
   <a class="next" onclick="plusSlides(1)">&#10095;</a>
 </div>
@@ -109,12 +97,10 @@ If everything seems correct and it's still not working, here is the revised code
     showSlides(slideIndex);
 
     function plusSlides(n) {
-      console.log('plusSlides function called with n:', n);
       showSlides(slideIndex += n);
     }
 
     function showSlides(n) {
-      console.log('showSlides function called with n:', n);
       let i;
       let slides = document.getElementsByClassName("mySlides");
       if (n > slides.length) {slideIndex = 1}
@@ -126,3 +112,4 @@ If everything seems correct and it's still not working, here is the revised code
     }
 </script>
 </body>
+</html>
