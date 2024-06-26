@@ -2,30 +2,32 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Grid Slideshow</title>
+<title>Simple Grid Slideshow</title>
 <style>
-    * {box-sizing: border-box;}
     body { 
       font-family: Arial, sans-serif; 
       margin: 0;
+      background: #f0f0f0;
     }
     .slideshow-container {
       position: relative;
-      margin: auto;
-      max-width: 1000px;
+      max-width: 500px;
+      margin: 20px auto;
     }
     .mySlides {
       display: none;
+      position: relative;
+      width: 100%;
     }
-    .row {
+    .image-container {
       display: flex;
+      justify-content: space-around;
       flex-wrap: wrap;
-      justify-content: center;
     }
-    .row img {
-      max-width: 45%;
-      margin: 10px;
-      box-shadow: 2px 2px 8px #888888;
+    .image-container img {
+      width: 48%;
+      margin: 1%;
+      vertical-align: middle;
     }
     .prev, .next {
       cursor: pointer;
@@ -33,55 +35,35 @@
       top: 50%;
       width: auto;
       padding: 16px;
-      margin-top: -22px;
+      margin-top: -50px;
       color: white;
       font-weight: bold;
       font-size: 18px;
       transition: 0.6s ease;
-      border-radius: 0 3px 3px 0;
       user-select: none;
-      z-index: 1000; /* Ensure arrows are above other elements */
-      background-color: rgba(0,0,0,0.4); /* Make arrows visible */
+      background-color: #333;
     }
     .next {
       right: 0;
-      border-radius: 3px 0 0 3px;
     }
     .prev {
       left: 0;
-      border-radius: 3px 0 0 3px;
-    }
-    .prev:hover, .next:hover {
-      background-color: rgba(0,0,0,0.8);
     }
 </style>
 </head>
 <body>
 <div class="slideshow-container">
-  
-  <!-- Slide 1 -->
-  <div class="mySlides fade">
-    <div class="row">
+  <div class="mySlides">
+    <div class="image-container">
       <img src="img1.jpg" alt="Image 1">
       <img src="img2.jpg" alt="Image 2">
+    </div>
+  </div>
+  
+  <div class="mySlides">
+    <div class="image-container">
       <img src="img3.jpg" alt="Image 3">
       <img src="img4.jpg" alt="Image 4">
-    </div>
-  </div>
-  
-  <!-- Slide 2 -->
-  <div class="mySlides fade">
-    <div class="row">
-      <img src="img5.jpg" alt="Image 5">
-      <img src="img6.jpg" alt="Image 6">
-    </div>
-  </div>
-  
-  <!-- Slide 3 -->
-  <div class="mySlides fade">
-    <div class="row">
-      <img src="img1.jpg" alt="Image 1">
-      <img src="img2.jpg" alt="Image 2">
     </div>
   </div>
 
@@ -90,23 +72,23 @@
 </div>
 
 <script>
-    let slideIndex = 1;
-    showSlides(slideIndex);
+var slideIndex = 1;
+showSlides(slideIndex);
 
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
 
-    function showSlides(n) {
-      let i;
-      let slides = document.getElementsByClassName("mySlides");
-      if (n > slides.length) {slideIndex = 1}
-      if (n < 1) {slideIndex = slides.length}
-      for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";  
-      }
-      slides[slideIndex-1].style.display = "block";  
-    }
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slides[slideIndex-1].style.display = "block";  
+}
 </script>
 </body>
 </html>
