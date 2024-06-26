@@ -8,14 +8,17 @@
     body { 
       font-family: Arial, sans-serif; 
       margin: 0;
+      background: #f4f4f4;
     }
     .slideshow-container {
       position: relative;
       margin: auto;
       max-width: 1000px;
+      overflow: hidden;  /* Ensure nothing spills over */
     }
     .mySlides {
       display: none;
+      padding: 10px;
     }
     .row {
       display: flex;
@@ -23,12 +26,12 @@
       justify-content: center;
     }
     .row img {
-      margin: 10px;
+      margin: 5px;
       box-shadow: 2px 2px 8px #888888;
     }
-    img.img-large { max-width: 30%; }
-    img.img-medium { max-width: 20%; }
-    img.img-small { max-width: 15%; }
+    img.img-large { width: 32%; }
+    img.img-medium { width: 21%; }
+    img.img-small { width: 15%; }
     .prev, .next {
       cursor: pointer;
       position: absolute;
@@ -42,6 +45,7 @@
       transition: 0.6s ease;
       border-radius: 0 3px 3px 0;
       user-select: none;
+      z-index: 10;  /* Make sure arrows are on top of images */
     }
     .next {
       right: 0;
@@ -65,21 +69,21 @@
       <img src="img1.jpg" alt="Image 1" class="img-large">
       <img src="img2.jpg" alt="Image 2" class="img-medium">
       <img src="img3.jpg" alt="Image 3" class="img-small">
-      <img src="img4.jpg" alt="Image 4" class="img-large">
-      <img src="img5.jpg" alt="Image 5" class="img-medium">
-      <img src="img6.jpg" alt="Image 6" class="img-small">
+      <img src="img4.jpg" alt="Image 4" class="img-medium">
+      <img src="img5.jpg" alt="Image 5" class="img-small">
+      <img src="img6.jpg" alt="Image 6" class="img-large">
     </div>
   </div>
   
   <!-- Slide 2 -->
   <div class="mySlides fade">
-    <div class="row">
+    <div the "row">
       <img src="img7.jpg" alt="Image 7" class="img-large">
       <img src="img8.jpg" alt="Image 8" class="img-medium">
       <img src="img9.jpg" alt="Image 9" class="img-small">
-      <img src="img10.jpg" alt="Image 10" class="img-large">
-      <img src="img11.jpg" alt="Image 11" class="img-medium">
-      <img src="img12.jpg" alt="Image 12" class="img-small">
+      <img src="img10.jpg" alt="Image 10" class="img-medium">
+      <img src="img11.jpg" alt="Image 11" class="img-small">
+      <img src="img12.jpg" alt="Image 12" class="img-large">
     </div>
   </div>
   
@@ -89,9 +93,9 @@
       <img src="img13.jpg" alt="Image 13" class="img-large">
       <img src="img14.jpg" alt="Image 14" class="img-medium">
       <img src="img15.jpg" alt="Image 15" class="img-small">
-      <img src="img16.jpg" alt="Image 16" class="img-large">
-      <img src="img17.jpg" alt="Image 17" class="img-medium">
-      <img src="img18.jpg" alt="Image 18" class="img-small">
+      <img src="img16.jpg" alt="Image 16" class="img-medium">
+      <img src="img17.jpg" alt="Image 17" class="img-small">
+      <img src="img18.jpg" alt="Image 18" class="img-large">
     </div>
   </div>
 
