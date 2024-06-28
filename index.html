@@ -21,10 +21,13 @@
     }
 
     .gallery-image {
+      width: 100%;
       height: 100%;
-      width: auto;
       object-fit: cover;
-      display: block;
+    }
+
+    .gallery-fixed-height {
+      height: 300px; /* Fixed height for specific images */
     }
 
     .swiper-button-next, .swiper-button-prev {
@@ -50,11 +53,11 @@
           </div>
           <div class="col-lg-4 mb-4 mb-lg-0">
             <img src="img3.jpg" class="w-100 shadow-1-strong rounded mb-4 gallery-image" alt="Image 3" />
-            <img src="img4.jpg" class="w-100 shadow-1-strong rounded mb-4 gallery-image" alt="Image 4" />
+            <img src="img4.jpg" class="w-100 shadow-1-strong rounded mb-4 gallery-image gallery-fixed-height" alt="Image 4" />
           </div>
           <div class="col-lg-4 mb-4 mb-lg-0">
             <img src="img5.jpg" class="w-100 shadow-1-strong rounded mb-4 gallery-image" alt="Image 5" />
-            <img src="img6.jpg" class="w-100 shadow-1-strong rounded mb-4 gallery-image" alt="Image 6" />
+            <img src="img6.jpg" class="w-100 shadow-1-strong rounded mb-4 gallery-image gallery-fixed-height" alt="Image 6" />
           </div>
         </div>
       </div>
