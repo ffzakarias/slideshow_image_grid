@@ -5,7 +5,80 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <style>
-    /* Your existing CSS here */
+    .gallery-container {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .blur-css {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    .gallery-card-info-wrap {
+      backdrop-filter: blur(40px);
+    }
+
+    .gallery-slider {
+      position: relative;
+    }
+
+    .swiper-wrapper {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    .swiper-slide {
+      flex: 1 0 100%;
+      display: flex;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .gallery-card {
+      position: relative;
+    }
+
+    .gallery-card.vertical {
+      grid-row: span 2;
+    }
+
+    .gallery-image {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .gallery-card-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .gallery-card:hover .gallery-card-overlay {
+      opacity: 1;
+    }
+
+    .swiper-button-next, .swiper-button-prev {
+      color: #000;
+    }
+
+    .swiper-pagination-bullet {
+      background: #000;
+    }
   </style>
   <title>Gallery</title>
 </head>
