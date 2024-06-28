@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <style>
+    /* Your existing CSS here */
+  </style>
+  <title>Gallery</title>
+</head>
+<body>
+
+<div class="gallery-container">
+  <div class="blur-css w-embed">
+    <style>
+      .gallery-card-info-wrap {
+        backdrop-filter: blur(40px);
+      }
+    </style>
+  </div>
+  <div class="gallery-header-wrap"></div>
+  <div class="swiper gallery-slider" data-delay="2000" data-animation="fade" data-autoplay="true" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true" role="region" aria-label="carousel">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="w-layout-grid gallery-grid">
+          <div class="gallery-card">
+            <img src="img1.jpg" alt="Photo" class="gallery-image">
+            <div class="gallery-card-overlay"></div>
+          </div>
+          <div class="gallery-card vertical">
+            <img src="img2.jpg" alt="Photo" class="gallery-image">
+            <div class="gallery-card-overlay"></div>
+          </div>
+          <div class="gallery-card">
+            <img src="img3.jpg" alt="Photo" class="gallery-image">
+            <div class="gallery-card-overlay"></div>
+          </div>
+          <div class="gallery-card">
+            <img src="img4.jpg" alt="Photo" class="gallery-image">
+          </div>
+          <div class="gallery-card">
+            <img src="img5.jpg" alt="Photo" class="gallery-image">
+          </div>
+          <div class="gallery-card">
+            <img src="img6.jpg" alt="Photo" class="gallery-image">
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="w-layout-grid gallery-grid">
+          <div class="gallery-card">
+            <img src="img7.jpg" alt="Photo" class="gallery-image">
+          </div>
+          <div class="gallery-card vertical">
+            <img src="img8.jpg" alt="Photo" class="gallery-image">
+          </div>
+          <div class="gallery-card">
+            <img src="img9.jpg" alt="Photo" class="gallery-image">
+          </div>
+          <div class="gallery-card">
+            <img src="img10.jpg" alt="Photo" class="gallery-image">
+          </div>
+          <div class="gallery-card">
+            <img src="img11.jpg" alt="Photo" class="gallery-image">
+          </div>
+          <div class="gallery-card">
+            <img src="img12.jpg" alt="Photo" class="gallery-image">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper('.swiper', {
+    loop: true,
+    autoplay: {
+      delay: 2000,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+</script>
+
+</body>
+</html>
