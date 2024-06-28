@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css" />
   <style>
     .gallery-container {
       position: relative;
@@ -37,20 +38,6 @@
     .swiper-slide {
       flex: 1 0 100%;
       display: flex;
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-    }
-
-    .gallery-card {
-      position: relative;
-    }
-
-    .gallery-card.vertical {
-      grid-row: span 2;
     }
 
     .gallery-image {
@@ -98,49 +85,34 @@
   <div class="swiper gallery-slider" data-delay="2000" data-animation="fade" data-autoplay="true" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true" role="region" aria-label="carousel">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
-        <div class="w-layout-grid gallery-grid">
-          <div class="gallery-card">
-            <img src="img1.jpg" alt="Photo" class="gallery-image">
-            <div class="gallery-card-overlay"></div>
+        <div class="row">
+          <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+            <img src="img1.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="Image 1" />
+            <img src="img2.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="Image 2" />
           </div>
-          <div class="gallery-card vertical">
-            <img src="img2.jpg" alt="Photo" class="gallery-image">
-            <div class="gallery-card-overlay"></div>
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <img src="img3.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="Image 3" />
+            <img src="img4.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="Image 4" />
           </div>
-          <div class="gallery-card">
-            <img src="img3.jpg" alt="Photo" class="gallery-image">
-            <div class="gallery-card-overlay"></div>
-          </div>
-          <div class="gallery-card">
-            <img src="img4.jpg" alt="Photo" class="gallery-image">
-          </div>
-          <div class="gallery-card">
-            <img src="img5.jpg" alt="Photo" class="gallery-image">
-          </div>
-          <div class="gallery-card">
-            <img src="img6.jpg" alt="Photo" class="gallery-image">
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <img src="img5.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="Image 5" />
+            <img src="img6.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="Image 6" />
           </div>
         </div>
       </div>
       <div class="swiper-slide">
-        <div class="w-layout-grid gallery-grid">
-          <div class="gallery-card">
-            <img src="img7.jpg" alt="Photo" class="gallery-image">
+        <div class="row">
+          <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+            <img src="img7.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="Image 7" />
+            <img src="img8.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="Image 8" />
           </div>
-          <div class="gallery-card vertical">
-            <img src="img8.jpg" alt="Photo" class="gallery-image">
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <img src="img9.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="Image 9" />
+            <img src="img10.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="Image 10" />
           </div>
-          <div class="gallery-card">
-            <img src="img9.jpg" alt="Photo" class="gallery-image">
-          </div>
-          <div class="gallery-card">
-            <img src="img10.jpg" alt="Photo" class="gallery-image">
-          </div>
-          <div class="gallery-card">
-            <img src="img11.jpg" alt="Photo" class="gallery-image">
-          </div>
-          <div class="gallery-card">
-            <img src="img12.jpg" alt="Photo" class="gallery-image">
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <img src="img11.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="Image 11" />
+            <img src="img12.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="Image 12" />
           </div>
         </div>
       </div>
@@ -168,6 +140,7 @@
     },
   });
 </script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
