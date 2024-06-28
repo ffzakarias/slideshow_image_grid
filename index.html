@@ -5,84 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css" />
-  <style>
-    .gallery-container {
-      position: relative;
-      width: 100%;
-      max-width: 1200px; /* Set maximum width */
-      margin: 0 auto; /* Center the container */
-      overflow: hidden;
-    }
-
-    .blur-css {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-    }
-
-    .gallery-card-info-wrap {
-      backdrop-filter: blur(40px);
-    }
-
-    .gallery-slider {
-      position: relative;
-    }
-
-    .swiper-wrapper {
-      display: flex;
-      transition: transform 0.5s ease;
-    }
-
-    .swiper-slide {
-      flex: 1 0 100%;
-      display: flex;
-    }
-
-    .gallery-image {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .gallery-card-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.5);
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    .gallery-card:hover .gallery-card-overlay {
-      opacity: 1;
-    }
-
-    .swiper-button-next, .swiper-button-prev {
-      color: #000;
-    }
-
-    .swiper-pagination-bullet {
-      background: #000;
-    }
-  </style>
   <title>Gallery</title>
 </head>
 <body>
 
-<div class="gallery-container">
-  <div class="blur-css w-embed">
-    <style>
-      .gallery-card-info-wrap {
-        backdrop-filter: blur(40px);
-      }
-    </style>
-  </div>
-  <div class="gallery-header-wrap"></div>
-  <div class="swiper gallery-slider" data-delay="2000" data-animation="fade" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true" role="region" aria-label="carousel">
+<div class="container gallery-container mt-4">
+  <div class="swiper gallery-slider" role="region" aria-label="carousel">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
         <div class="row">
