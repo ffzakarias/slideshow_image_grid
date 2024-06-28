@@ -82,7 +82,7 @@
     </style>
   </div>
   <div class="gallery-header-wrap"></div>
-  <div class="swiper gallery-slider" data-delay="2000" data-animation="fade" data-autoplay="true" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true" role="region" aria-label="carousel">
+  <div class="swiper gallery-slider" data-delay="2000" data-animation="fade" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true" role="region" aria-label="carousel">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
         <div class="row">
@@ -127,10 +127,6 @@
 <script>
   var swiper = new Swiper('.swiper', {
     loop: true,
-    autoplay: {
-      delay: 2000,
-      disableOnInteraction: false, // Ensure autoplay continues after manual interaction
-    },
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
